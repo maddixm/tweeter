@@ -1,0 +1,29 @@
+h2 {
+  border-bottom: solid 1px #000;
+}
+
+.container {
+  padding: 2em; /* account for fixed header */
+  margin-top: 80px;
+}
+
+.container .new-tweet {
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  background-color: #f0f0f0;
+  padding: 0 1em 0.75em 1em;
+}
+
+.container textarea {
+  width: 100%;
+  padding: 0.5em;
+}
+
+.tweet-err {
+  color: #ff0000;
+}
+
+.container .counter {
+  float: right; /* simulates right align text */
+  font-style: italic;
+}
