@@ -1,5 +1,5 @@
-/*
- * http://www.paulirish.com/2012/box-sizing-border-box-ftw/
+ /*
+ http://www.paulirish.com/2012/box-sizing-border-box-ftw/
  * https://css-tricks.com/international-box-sizing-awareness-day/
  * Do not modify these two selectors, please
  */
@@ -31,3 +31,89 @@ main {
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
+
+.grey-border {
+  border: 1px solid #ccc;
+}
+
+.grey-border-top {
+  border-top: 1px solid #ccc;
+}
+
+.tweet {
+  margin: 0.75em 0 0 0;
+  border-radius: 5px;
+  height: auto;
+}
+
+.tweet:hover {
+  border-color: #000000;
+}
+
+.tweet:hover header {
+  background-color: #d8d8d8;
+}
+
+.tweet:hover .avatar {
+  opacity: 1;
+}
+
+.tweet:hover .user-full-name, .tweet:hover .user-handle {
+  color: #244751;
+}
+
+.tweet:hover .footer-images {
+  display: inline;
+}
+
+.tweet header {
+  background-color: #f0f0f0;
+  border-radius: 5px 5px 0px 0px;
+  padding: 0.5em;
+  height: 4em;
+}
+
+.tweet .avatar {
+  float: left;
+  border-radius: 5px;
+  height: 3em;
+  width: 3em;
+  display:flex; /* flexbox for vertical alignment */
+  align-items: center; /* vertical */
+  opacity: 0.6;
+}
+
+.tweet .user-full-name {
+  padding-left: 0.5em;
+  font-weight: bold;
+  font-size: 1.25em;
+  color: #577a84;
+}
+
+.tweet .user-handle {
+  float: right;
+  font-size: 0.75em;
+  color: #707070;
+}
+
+.tweet p {
+  padding: 1em 1em 1em 1em;
+}
+
+.tweet footer {
+  font-size: 0.6em;
+  padding: 0 1em 0 1em;
+  display: flex; /* flexbox for vertical alignment */
+  align-items: center; /* vertical */
+  justify-content: space-between; /* allows right alignment of images */
+  height: 3em;
+}
+
+.tweet .footer-images {
+  display: none;
+}
+
+.tweet .footer-images img {
+  height: 10px;
+  width: auto;
+}
