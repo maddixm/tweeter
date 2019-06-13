@@ -121,16 +121,16 @@ $(document).ready(function() {
   }
 
   // display tweet form
-  const $composeButton = document.querySelector('.compose-button');
-  $composeButton.addEventListener('click', function(ev) {
+  const $composeButton = $('.compose-button');
+  $composeButton.on('click', function(ev) {
     $('.new-tweet').slideToggle('slow');
     $("#tweet-text").focus();
   });
 
   // submit new tweet
-  const $tweetForm = document.querySelector('#submit-tweet');
+  const $tweetForm = $('#submit-tweet');
 
-  $tweetForm.addEventListener('submit', function(ev) {
+  $tweetForm.on('submit', function(ev) {
     ev.preventDefault();
 
     // check for invalid tweet length

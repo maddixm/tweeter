@@ -2,10 +2,10 @@
 
 $(document).ready(function() {
 
-  let $tweetArea = document.querySelector("textarea");
+  let $tweetArea = $('textarea');
   const maxTweetLength = 140;
 
-  $tweetArea.addEventListener('keydown', function(ev) {
+  $tweetArea.on('keydown', function(ev) {
     ev.stopPropagation(); // stops event from propogating outwards
     let tweetLength = $(this).val().length;
     let charCounter = $(this).siblings(".counter");
