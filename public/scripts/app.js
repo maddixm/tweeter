@@ -88,8 +88,8 @@ const sortTweetsByDateDesc = function (tweets) {
 
 const renderTweets = function(tweets) {
   let arrTweets = [];
-
   sortTweetsByDateDesc(tweets);
+
   for( let tweet in tweets) {
     arrTweets.push(createTweetElement(tweets[tweet]));
   }
@@ -124,6 +124,7 @@ $(document).ready(function() {
   const $composeButton = document.querySelector('.compose-button');
   $composeButton.addEventListener('click', function(ev) {
     $('.new-tweet').slideToggle('slow');
+    $("#tweet-text").focus();
   });
 
   // submit new tweet
@@ -142,7 +143,7 @@ $(document).ready(function() {
     } else {
       responseWindow.removeClass("tweet-err");
 
-      // submit the form
+      // submit the form and show the new tweet
       $.ajax({
         url:    '/tweets',
         method: 'POST',
@@ -150,7 +151,6 @@ $(document).ready(function() {
       })
       .done(function() {
         loadTweets();
-
       })
       .fail(function(err) {
         console.log( `error: ${err.statusText}` );
