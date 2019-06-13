@@ -45,47 +45,13 @@
         <h2>Compose Tweet</h2>
         <form action="/tweets" method="POST">
           <textarea name="text" placeholder="What are you humming about?"></textarea>
-          <input type="submit" value="Tweet">
+          <input id="tweet-button" type="submit" value="Tweet">
           <span class="counter">140</span>
         </form>
       </section>
 
-      <section>
-        <article class="tweet grey-border">
-          <header>
-          <img src="http://placekitten.com/100/100" class="avatar">
-          <span class="user-full-name">Bill Fields</span>
-          <span class="user-handle">@MrFields</span>
-          </header>
-          <p>Little tweet here</p>
-          <footer class="footer grey-border-top">
-            <p>10 days ago</p>
-            <span class="footer-images">
-              <!-- from https://feathericons.com/ -->
-              <img class="logo" src="/images/flag.svg">
-              <img class="logo" src="/images/repeat.svg">
-              <img class="logo" src="/images/heart.svg">
-            </span>
-          </footer>
-        </article>
-
-        <article class="tweet grey-border">
-          <header>
-          <img src="http://placekitten.com/100/100" class="avatar">
-          <span class="user-full-name">Bill Fields</span>
-          <span class="user-handle">@MrFields</span>
-          </header>
-          <p>I'm writing a longer tweet that spans multiple lines just because. I have a dog and his name is dog.</p>
-          <footer class="footer grey-border-top">
-            <p>10 days ago</p>
-            <span class="footer-images">
-              <!-- from https://feathericons.com/ -->
-              <img class="logo" src="/images/flag.svg">
-              <img class="logo" src="/images/repeat.svg">
-              <img class="logo" src="/images/heart.svg">
-            </span>
-          </footer>
-        </article>
+      <section id="tweets-container">
+        <!-- articles -->
       </section>
 
     </main>

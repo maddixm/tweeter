@@ -44,30 +44,19 @@ main {
   margin: 0.75em 0 0 0;
   border-radius: 5px;
   height: auto;
+  opacity: 0.6
 }
 
 .tweet:hover {
-  border-color: #000000;
+  opacity: 1.0;
 }
 
-.tweet:hover header {
-  background-color: #d8d8d8;
-}
-
-.tweet:hover .avatar {
-  opacity: 1;
-}
-
-.tweet:hover .user-full-name, .tweet:hover .user-handle {
-  color: #244751;
-}
-
-.tweet:hover .footer-images {
+.tweet:hover .footer-images img {
   display: inline;
 }
 
 .tweet header {
-  background-color: #f0f0f0;
+  background-color: #d8d8d8;
   border-radius: 5px 5px 0px 0px;
   padding: 0.5em;
   height: 4em;
@@ -80,20 +69,19 @@ main {
   width: 3em;
   display:flex; /* flexbox for vertical alignment */
   align-items: center; /* vertical */
-  opacity: 0.6;
 }
 
 .tweet .user-full-name {
   padding-left: 0.5em;
   font-weight: bold;
   font-size: 1.25em;
-  color: #577a84;
+  color: #244751;
 }
 
 .tweet .user-handle {
   float: right;
   font-size: 0.75em;
-  color: #707070;
+  color: #244751;
 }
 
 .tweet p {
@@ -109,11 +97,8 @@ main {
   height: 3em;
 }
 
-.tweet .footer-images {
-  display: none;
-}
-
 .tweet .footer-images img {
+  display: none;
   height: 10px;
   width: auto;
 }
