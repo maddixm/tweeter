@@ -120,6 +120,12 @@ $(document).ready(function() {
     });
   }
 
+  // display tweet form
+  const $composeButton = document.querySelector('.compose-button');
+  $composeButton.addEventListener('click', function(ev) {
+    $('.new-tweet').slideToggle('slow');
+  });
+
   // submit new tweet
   const $tweetForm = document.querySelector('#submit-tweet');
 

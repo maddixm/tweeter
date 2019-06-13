@@ -7,13 +7,31 @@
   padding: 0 2em 0 2em;
   background-color: #00a087;
   color: #e8fdff;
-  display:flex; /* flexbox for vertical alignment */
+  display:flex;  flexbox for vertical alignment
   align-items: center; /* vertical */
 }
 
+#nav-bar .compose-button {
+  margin-left: auto; /* right align button */
+  margin-top: 15px;
+  background-color: #e8fdff;
+  border-radius:5px;
+  border:1px solid #000000;
+  color:#00a088;
+  font-size: 1em;
+  height: 50px;
+  text-decoration: none;
+  padding: 15px;
+}
+#nav-bar:hover .compose-button {
+  background-color: #ffffff;
+  color: #000000;
+  cursor:pointer;
+}
+
 #nav-bar .header {
-  float: left;
   padding-left: 10px;
+  padding-top: 10px;
   font-size: 2em;
   line-height: 2em;
  }
