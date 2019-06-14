@@ -15,7 +15,6 @@ const timeSinceUnixDate = function( unixDate ) {
   const hours = Math.round(msecPassed / 3.6e+6);  // ms per hour
   const days = Math.round(msecPassed / 8.64e+7);  // ms per day
   let timePassed = '';
-  console.log(msecPassed,seconds);
 
   if (days >= 1 ) {
     timePassed += `${days} day`;
@@ -39,11 +38,11 @@ const timeSinceUnixDate = function( unixDate ) {
 // https://www.w3resource.com/javascript-exercises/javascript-string-exercise-19.php
 function escapeHtml(unsafe) {
   let safeStr = unsafe
-       .replace(/&/g, "&amp;")
-       .replace(/</g, "&lt;")
-       .replace(/>/g, "&gt;")
-       .replace(/"/g, "&quot;")
-       .replace(/'/g, "&#039;");
+       .replace(/&/g, '&amp;')
+       .replace(/</g, '&lt;')
+       .replace(/>/g, '&gt;')
+       .replace(/"/g, '&quot;')
+       .replace(/'/g, '&#039;');
   return(safeStr);
 }
 
@@ -135,14 +134,15 @@ $(document).ready(function() {
     ev.preventDefault();
 
     // check for invalid tweet length
-    let responseMsg = checkTweetLength($('textarea').val());
-    const responseWindow = $(this).children("#tweet-response-window");
-    responseWindow.text(responseMsg);
+    let $tweetText = $(this).children('#tweet-text');
+    let responseMsg = checkTweetLength($tweetText.val());
+    const $responseWindow = $(this).children("#tweet-response-window");
+    $responseWindow.text(responseMsg);
 
     if ( responseMsg ) {
-      responseWindow.addClass("tweet-err");
+      $responseWindow.addClass('tweet-err');
     } else {
-      responseWindow.removeClass("tweet-err");
+      $responseWindow.removeClass('tweet-err');
 
       // submit the form and show the new tweet
       $.ajax({
@@ -151,6 +151,7 @@ $(document).ready(function() {
         data:   $(this).serialize()
       })
       .done(function() {
+        $tweetText.val('');
         loadTweets();
       })
       .fail(function(err) {

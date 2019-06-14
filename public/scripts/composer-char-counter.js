@@ -13,8 +13,10 @@ $(document).ready(function() {
 
     charCounter.html(charsLeft); // use html when in span
 
-    if( !charsLeft ) {
-      $(this).toggleClass("tweet-err");
+    if( charsLeft < 0 ) {
+      $(this).addClass("tweet-err");
+    } else {
+      $(this).removeClass("tweet-err");
     }
 
   });

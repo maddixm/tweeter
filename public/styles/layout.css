@@ -86,6 +86,7 @@ main {
 
 .tweet p {
   padding: 1em 1em 1em 1em;
+  word-wrap: break-word;
 }
 
 .tweet footer {
