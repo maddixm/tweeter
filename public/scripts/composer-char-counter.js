@@ -2,14 +2,14 @@
 
 $(document).ready(function() {
 
-  let $tweetArea = $('textarea');
+  const $tweetArea = $('textarea');
   const maxTweetLength = 140;
 
   $tweetArea.on('keydown', function(ev) {
     ev.stopPropagation(); // stops event from propogating outwards
-    let tweetLength = $(this).val().length;
-    let charCounter = $(this).siblings(".counter");
-    let charsLeft = maxTweetLength - tweetLength;
+    const tweetLength = $(this).val().length;
+    const charCounter = $(this).siblings(".counter");
+    const charsLeft = maxTweetLength - tweetLength;
 
     charCounter.html(charsLeft); // use html when in span
 

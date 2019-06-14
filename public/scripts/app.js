@@ -37,7 +37,7 @@ const timeSinceUnixDate = function( unixDate ) {
 // adapted from:
 // https://www.w3resource.com/javascript-exercises/javascript-string-exercise-19.php
 function escapeHtml(unsafe) {
-  let safeStr = unsafe
+  const safeStr = unsafe
        .replace(/&/g, '&amp;')
        .replace(/</g, '&lt;')
        .replace(/>/g, '&gt;')
@@ -134,8 +134,8 @@ $(document).ready(function() {
     ev.preventDefault();
 
     // check for invalid tweet length
-    let $tweetText = $(this).children('#tweet-text');
-    let responseMsg = checkTweetLength($tweetText.val());
+    const $tweetText = $(this).children('#tweet-text');
+    const responseMsg = checkTweetLength($tweetText.val());
     const $responseWindow = $(this).children("#tweet-response-window");
     $responseWindow.text(responseMsg);
 
