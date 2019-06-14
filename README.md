@@ -20,5 +20,6 @@ Includes HTML, CSS, JS, jQuery and AJAX front-end and Node, Express and MongoDB 
 
 ## Final Product
 
-!["Screenshot of URLs page"](https://github.com/maddixm/tiny-app/blob/master/docs/urls-page.png?raw=true)
-!["Screenshot of Create URL page"](https://github.com/maddixm/tiny-app/blob/master/docs/create-url.png?raw=true)
+!["Screenshot of main page with compose form collapsed"](https://github.com/maddixm/tweeter/blob/master/public/images/tweeter-main-no-compose.png?raw=true)
+!["Screenshot of main page with compose form expanded"](https://github.com/maddixm/tweeter/blob/master/public/images/tweeter-main.png?raw=true)
+!["Screenshot of error handling on compose form"](https://github.com/maddixm/tweeter/blob/master/public/images/compose-tweet-error.png?raw=true)
