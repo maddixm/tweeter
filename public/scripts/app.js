@@ -15,6 +15,7 @@ const timeSinceUnixDate = function( unixDate ) {
   const hours = Math.round(msecPassed / 3.6e+6);  // ms per hour
   const days = Math.round(msecPassed / 8.64e+7);  // ms per day
   let timePassed = '';
+  console.log(msecPassed,seconds);
 
   if (days >= 1 ) {
     timePassed += `${days} day`;
